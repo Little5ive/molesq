@@ -1,8 +1,7 @@
 from pathlib import Path
 from setuptools import setup, find_packages
 
-with open(Path(__file__).resolve().parent / "README.md") as f:
-    readme = f.read()
+readme = Path(__file__).resolve().parent.joinpath("README.md").read_text()
 
 setup(
     name="molesq",
@@ -23,11 +22,9 @@ setup(
     classifiers=[
         "Development Status :: 3 - Alpha",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3",
     ],
-    python_requires=">=3.7, <4.0",
+    python_requires=">=3.8, <4.0",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
 )

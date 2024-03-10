@@ -1,11 +1,12 @@
 .PHONY: fmt
 fmt:
-	black .
+	ruff check --fix && \
+	ruff format
 
 .PHONY: lint
 lint:
-	black --check .
-	flake8 .
+	ruff check
+	ruff format --check
 
 .PHONY: test
 test:
