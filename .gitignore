@@ -141,3 +141,5 @@ molesq/version.py
 
 docs/
 env/
+.benchmarks/
+.ruff_cache/
